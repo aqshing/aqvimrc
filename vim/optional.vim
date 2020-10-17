@@ -5,9 +5,9 @@ func! MyComments()
         normal 0i//
     elseif &filetype == 'vim'
         normal 0i""
-    elseif &filetype == 'shell'
+    elseif &filetype == 'shell' || &filetype == 'sh'
         normal 0i##
-    elseif &filetype == 'python'
+    elseif &filetype == 'python' || &filetype == 'py'
         normal 0i##
     endif
     normal j
@@ -20,9 +20,9 @@ func! UnComments()
         normal 0df/j
     elseif &filetype == 'vim'
         normal 0df"j
-    elseif &filetype == 'shell'
+    elseif &filetype == 'shell'|| &filetype == 'sh'
         normal 0df#j
-    elseif &filetype == 'python'
+    elseif &filetype == 'python'|| &filetype == 'py'
         normal 0df#j
     endif
 endfunc
