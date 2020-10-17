@@ -1,5 +1,5 @@
 alias la="ls -A"
-alias alias ll="ls -alF"
+#alias alias ll="ls -alF"
 alias q="exit"
 alias cat="cat -n"
 alias kill="kill -9"
