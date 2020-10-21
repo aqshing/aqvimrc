@@ -1,7 +1,7 @@
 alias la="ls -A"
 #alias alias ll="ls -alF"
 alias q="exit"
-alias cat="cat -n"
+alias catn="cat -n"
 alias kill="kill -9"
 alias d="dirs -v | head -10"
 alias 1="cd -"
@@ -13,3 +13,4 @@ alias 6="cd -6"
 alias 7="cd -7"
 alias 8="cd -8"
 alias 9="cd -9"
+set -o vi
