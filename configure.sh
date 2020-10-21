@@ -16,7 +16,7 @@ set -xeuo pipefail
 if [ -d "~/.vim" ]; then
 	mkdir ~/.vim
 fi
-cp -r -a ./vim ~/.vim
+cp -r -a ./vim/* ~/.vim
 
 if [ -d "~/.config" ]; then
 	mkdir ~/.config
