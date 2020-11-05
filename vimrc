@@ -593,6 +593,7 @@ command! ZoomToggle call s:ZoomToggle()
 ""git branch( -d/-D):添加一个新的分支;d/(D):(强制)删除分支
 ""git checkout:切换git分支
 ""git merge:合并分支
+""git remote rm origin:删除远程git仓库源
 ""git remote add origin https:告诉git你的项目在网上的地址在哪
 ""git push --set-upstream origin master:提交项目
 ""git config credential.helper store:让git记住你的github的密码

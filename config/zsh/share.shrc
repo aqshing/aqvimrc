@@ -1,8 +1,14 @@
+## la:查看隐藏文件
 alias la="ls -A"
-#alias alias ll="ls -alF"
+## ll: 查看文件详细信息
+alias ll="ls -alF"
+## rr:递归删除
+alias rr="rm -r"
 alias q="exit"
 alias catn="cat -n"
 alias kill="kill -9"
+alias pg="ps -a | grep"
+alias tg="top | grep"
 alias d="dirs -v | head -10"
 alias 1="cd -"
 alias 2="cd -2"
@@ -13,4 +19,4 @@ alias 6="cd -6"
 alias 7="cd -7"
 alias 8="cd -8"
 alias 9="cd -9"
-set -o vi
+#set -o vi
