@@ -29,14 +29,15 @@ zinit snippet OMZ::plugins/extract
 zinit ice lucid wait='1'
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 
+#   以下内容不推荐使用
 #   # 使用 OMZ 主题
 #   setopt promptsubst
 #   # Load theme from OMZ
 #   zinit snippet OMZT:robbyrussell
 #   zinit snippet OMZT:gnzh
-#   # 加载 pure 主题
-#   zinit ice pick"async.zsh" src"pure.zsh"
-#   zinit light sindresorhus/pure
+# 加载 pure 主题
+zinit ice pick"async.zsh" src"pure.zsh"
+zinit light sindresorhus/pure
 
 # ---- (可选)加载了一堆二进制程序 ----
 zinit light zinit-zsh/z-a-bin-gem-node
