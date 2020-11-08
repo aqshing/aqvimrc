@@ -1,3 +1,6 @@
+# 默认跟随系统，一般不需要设置
+##export LANGUAGE=en_US #: zh_CN
+
 # 快速目录跳转
 zinit ice lucid wait='1'
 #zinit light skywind3000/z.lua
