@@ -40,8 +40,8 @@ function! SetTabToSpace()
 	if &filetype == 'c' || &filetype == 'cpp' || &filetype == 'java'
 		set expandtab
 		exec "IndentLinesToggle"
-""		let g:indentLine_char = '•'
-		let g:indentLine_char = '➤'
+		let g:indentLine_char = '•'
+""		let g:indentLine_char = '➤'
 ""		let g:indentLine_color_term = 239
 ""		let g:indentLine_color_dark = 1 " (default: 2)
 ""		let g:indentLine_bgcolor_term = 202
