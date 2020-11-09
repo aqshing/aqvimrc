@@ -112,6 +112,6 @@ hi User5 cterm=none ctermfg=green ctermbg=0
 
 
 ""如果版本号小于810,禁止coc插件弹出警告
-if version < 810
-	let g:coc_disable_startup_warning = 1
-endif
+""if version < 810
+""	let g:coc_disable_startup_warning = 1
+""endif
