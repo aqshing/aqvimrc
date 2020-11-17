@@ -42,13 +42,6 @@ func! UnComments()
 endfunc
 
 
-nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
-""function! NopCommand()
-""endfunction
-""command! Midnight  call NopCommand()
-""command! Morning   call NopCommand()
-""command! Afternoon call NopCommand()
-""command! Evening   call NopCommand()
 function! SetTimeOfDayColors()
     let currentHour = strftime("%H")
 ""    echo "currentHour is " . currentHour
@@ -68,8 +61,7 @@ function! SetTimeOfDayColors()
     execute "colorscheme " . colorScheme
 endfunction
 "set statusline +=\ %{SetTimeOfDayColors()}
-let g:CallFunction=SetTimeOfDayColors()
-
+call SetTimeOfDayColors()
 
 " See [http://vim.wikia.com/wiki/Highlight_unwanted_spaces]
 " - highlight trailing whitespace in red
@@ -111,6 +103,7 @@ hi User5 cterm=none ctermfg=green ctermbg=0
 "hi Normal ctermfg=252 ctermbg=none
 
 
+""nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 ""如果版本号小于810,禁止coc插件弹出警告
 ""if version < 810
 ""	let g:coc_disable_startup_warning = 1

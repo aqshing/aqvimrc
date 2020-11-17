@@ -69,6 +69,7 @@ func! SetTitle()
 		normal ggifilehead,e
 	endif
 endfunc
+""deprecated```已废弃，不再使用
 "新建.c,.h,.sh,.java文件，自动插入文件头
 "autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java exec ":call SetTitle()"
 ""定义函数SetTitle，自动插入文件头

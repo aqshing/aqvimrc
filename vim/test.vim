@@ -27,7 +27,7 @@ function! SetPath()
     if path == ''
         let path=GetCfg('./.vimcfg', 'PATH+')
     endif
-	
+
     if path == ''
         let path=GetCfg('../.vimcfg', 'PATH+')
     endif
@@ -85,11 +85,11 @@ function! GenMakeCmd()
             return 'make -j8'
         else
             if ext ==? 'c'
-				"return 'gcc --verbose -g3 -O0 -Wall -o "%<" "%"'
-				return 'gcc --std=c99 -Wall -g -O2 -o "%<" "%"'
+                "return 'gcc --verbose -g3 -O0 -Wall -o "%<" "%"'
+                return 'gcc --std=c99 -Wall -g -O2 -o "%<" "%"'
             else
                 "return 'g++ --verbose -g3 -O0 -Wall -o "%<" "%"'
-				return 'g++ -std=c++11 -Wall -g -O2 -o "%<" "%"'
+                return 'g++ -std=c++11 -Wall -g -O2 -o "%<" "%"'
             endif
         endif
     elseif ext ==? 'java'
@@ -118,8 +118,8 @@ function! GetMakeCmd()
     if make_cmd != ''
         return make_cmd
     endif
-	
-	let make_cmd=GetCfg('../.vimcfg', 'MAKE_CMD')
+
+    let make_cmd=GetCfg('../.vimcfg', 'MAKE_CMD')
     if make_cmd != ''
         return make_cmd
     endif
@@ -132,7 +132,7 @@ function! Make()
     redraw!
 
     let make_cmd=GetMakeCmd()
-	"let g:MAKE_CMD = make_cmd
+    "let g:MAKE_CMD = make_cmd
     if make_cmd != ''
         exec 'cclose'
         let &makeprg=make_cmd
@@ -214,8 +214,8 @@ function! GetRunCmd()
     if run_cmd != ''
         return run_cmd
     endif
-	
-	let run_cmd=GetCfg('../.vimcfg', 'RUN_CMD')
+
+    let run_cmd=GetCfg('../.vimcfg', 'RUN_CMD')
     if run_cmd != ''
         return run_cmd
     endif
@@ -228,7 +228,7 @@ function! Run()
     redraw!
 
     let run_cmd=GetRunCmd()
-	echo run_cmd
+    echo run_cmd
     if run_cmd != ''
         exec 'cclose'
         exec '!'.run_cmd
