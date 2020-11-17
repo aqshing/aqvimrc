@@ -22,6 +22,7 @@ if [ -d "~/.config" ]; then
 	mkdir ~/.config
 fi
 cp -r -a ./config/* ~/.config
+cp ./vimrc ~/.config/nvim/init.vim
 
 ##if [ -d "~/optappneovim/bin" ]; then
 ##	echo "路径不存在"
@@ -36,8 +37,8 @@ cp -r -a ./config/* ~/.config
 ##ln -s nvim.appimage vi
 ##cd -
 
-if [ -e "~/local/share/nvim/site/autoload/plug.vim" ]; then
-	cp ./plug.vim ~/local/share/nvim/site/autoload/plug.vim
+if [ -e "~/.local/share/nvim/site/autoload/plug.vim" ]; then
+	cp ./plug.vim ~/.local/share/nvim/site/autoload/plug.vim
 fi
 
 

@@ -10,11 +10,10 @@ set -xeuo pipefail
 
 if [ -d "~/.zinit" ]; then
 	mkdir ~/.zinit
+	git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
 fi
 
-git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
-
-if [ -f "~/.zshrc" ]; then
+if [ ! -f "~/.zshrc" ]; then
 	cp ./zshrc ~/.zshrc
 else
 	echo "please add to your [~/.zshrc]"
