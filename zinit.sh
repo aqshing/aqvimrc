@@ -4,18 +4,20 @@
 # Author: shing
 # Email: www.asm.best
 # Created: Thu Nov  5 20:53:24 2020
+# Changed: 2020-11-18 13:41:01
 ###################################################
 
-set -xeuo pipefail
+##set -xeuo pipefail
 
-if [ -d "~/.zinit" ]; then
+if [ ! -d ~/.zinit ]; then
 	mkdir ~/.zinit
 	git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
 fi
 
-if [ ! -f "~/.zshrc" ]; then
+if [ ! -e ~/.zshrc ]; then
 	cp ./zshrc ~/.zshrc
 else
-	echo "please add to your [~/.zshrc]"
+	echo "If your ZSHRC does not include the following,"
+	echo "Please add them to [~/.zshrc]."
 	cat ./zshrc
 fi

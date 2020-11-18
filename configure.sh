@@ -3,7 +3,8 @@
 # Filename: configure.sh
 # Author: shing
 # E-mail: www.asm.best
-# Created Time: Fri 09 Oct 2020 07:18:13 PM CST
+# Created: Fri 09 Oct 2020 07:18:13 PM CST
+# Changed: 2020-11-18 13:38:26
 ###################################################
 
 set -xeuo pipefail
@@ -13,12 +14,12 @@ set -xeuo pipefail
 ##pwd
 ##cd -
 
-if [ -d "~/.vim" ]; then
+if [ ! -d ~/.vim ]; then
 	mkdir ~/.vim
 fi
 cp -r -a ./vim/* ~/.vim
 
-if [ -d "~/.config" ]; then
+if [ ! -d ~/.config ]; then
 	mkdir ~/.config
 fi
 cp -r -a ./config/* ~/.config
@@ -37,7 +38,7 @@ cp ./vimrc ~/.config/nvim/init.vim
 ##ln -s nvim.appimage vi
 ##cd -
 
-if [ -e "~/.local/share/nvim/site/autoload/plug.vim" ]; then
+if [ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]; then
 	cp ./plug.vim ~/.local/share/nvim/site/autoload/plug.vim
 fi
 
