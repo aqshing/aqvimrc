@@ -44,10 +44,13 @@ endfunc
 
 ""自动更新文件保存时间
 function! TimeOfLastChange()
+	""保存光标原位置
+""	let save_cursor=getpos(".")
+	let win_view = winsaveview()
 	let pattern = "Changed: "
 	normal gg
-	""从头查找Changed，搜索到就跳转，最多索引100行
-	let row = search(pattern, 'e', 100)
+	""从头查找Changed，搜索到就跳转，最多索引50行
+	let row = search(pattern, 'e', 50)
 	if row  == 0
 		return
 	else
@@ -55,9 +58,12 @@ function! TimeOfLastChange()
 		normal 0
 		s/\(Changed\s*:\s*\)\(.*\)$/\=submatch(1).strftime("%Y-%m-%d %H:%M:%S")/ge
 	endif
+	""恢复光标位置
+""	call setpos(".", save_cursor)
+	call winrestview(win_view)
 endfunction
 "" 当下列文件保存时触发修改最后保存时间
-au BufWritePre *.c,*.cpp,*.vim,*.cc,*.java,*.py,*.sh call TimeOfLastChange()
+au BufWritePre *.c,*.cpp,*.cc,*.java,*.py,*.sh call TimeOfLastChange()
 
 
 function! SetTimeOfDayColors()
