@@ -6,14 +6,15 @@ func! MyComments()
     elseif &filetype == 'vim'
         normal 0i""
     elseif &filetype == 'shell' || &filetype == 'sh' ||
-\          &filetype == 'python' || &filetype == 'py'
+\          &filetype == 'python' || &filetype == 'py'||
+\          &filetype == 'conf'
         normal 0i##
     elseif &filetype == 'lua'
         normal 0i--
     else
         let s:fileName = expand("%:t")
-        if s:fileName == 'Makefile' || s:fileName == 'Makefile' ||
-\          s:fileName == 'CMakeLists.txt'
+        if s:fileName == 'CMakeLists.txt' || s:fileName == 'Makefile' ||
+\          s:fileName == 'makefile'
             normal 0i##
         endif
     endif
@@ -28,14 +29,15 @@ func! UnComments()
     elseif &filetype == 'vim'
         normal 0df"j
     elseif &filetype == 'shell'|| &filetype == 'sh' ||
-\          &filetype == 'python'|| &filetype == 'py'
+\          &filetype == 'python'|| &filetype == 'py'||
+\          &filetype == 'conf'
         normal 0df#j
     elseif &filetype == 'lua'
         normal 0df-j
     else
         let s:fileName = expand("%:t")
-        if s:fileName == 'Makefile' || s:fileName == 'Makefile' ||
-\          s:fileName == 'CMakeLists.txt'
+        if s:fileName == 'CMakeLists.txt' || s:fileName == 'Makefile' ||
+\          s:fileName == 'makefile'
             normal 0df#j
         endif
     endif
