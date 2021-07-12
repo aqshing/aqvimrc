@@ -30,7 +30,7 @@ zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
 zinit snippet OMZ::plugins/extract
 
 zinit ice lucid wait='1'
-zinit snippet OMZ::plugins/git/git.plugin.zsh
+##zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 #   以下内容不推荐使用
 #   # 使用 OMZ 主题
