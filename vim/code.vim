@@ -154,7 +154,11 @@ func! RunCode()
 			:sp
 		endif
 		:term ./%<
+""if terminal is termux, not res
+""如果不用expand萃取，无法正确读取
+	if !filereadable(expand('$HOME/.termux_authinfo'))
 		:res -8
+	endif
 	elseif &filetype == 'java'
 		exec "!time java %<"
 	elseif &filetype == 'sh'
